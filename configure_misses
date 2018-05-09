@@ -1,0 +1,9 @@
+Configure miss: libxml - version >= 2.0.0
+Configure miss: fpurge
+Configure miss: priv.h usability
+Configure miss: priv.h presence
+Configure miss: priv.h
+Configure miss: whether fflush works on input streams
+Configure miss: whether fpurge is declared
+Configure miss: _fseeki64
+Configure miss: getppriv
