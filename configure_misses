@@ -7,3 +7,5 @@ Configure miss: whether fflush works on input streams
 Configure miss: whether fpurge is declared
 Configure miss: _fseeki64
 Configure miss: getppriv
+Configure miss: __mktime_internal
+Configure miss: timezone_t
