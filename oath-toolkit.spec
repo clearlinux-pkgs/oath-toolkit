@@ -6,7 +6,7 @@
 #
 Name     : oath-toolkit
 Version  : 2.6.2
-Release  : 2
+Release  : 3
 URL      : http://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.2.tar.gz
 Source0  : http://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.2.tar.gz
 Source99 : http://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.2.tar.gz.sig
