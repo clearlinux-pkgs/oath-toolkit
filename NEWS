@@ -1,5 +1,59 @@
 OATH Toolkit NEWS -- History of user-visible changes.           -*- outline -*-
-Copyright (C) 2009-2016 Simon Josefsson.  Licensed under the GPLv3+.
+Copyright (C) 2009-2020 Simon Josefsson.  Licensed under the GPLv3+.
+
+* Version 2.6.5 (released 2020-12-29)
+
+** oathtool: Support for reading KEY and OTP from standard input or filename.
+KEY and OTP may now be given as '-' to mean stdin, or @FILE to read
+from a particular file.  This is recommended on multi-user systems,
+since secrets as command line parameters leak.  Based on a patch from
+Ian Jackson <ijackson@chiark.greenend.org.uk>.  Fixes #6.
+
+** pam_oath: Fix unlikely logic fail on out of memory conditions.
+Patch from Matthias Gerstner.
+
+** Doc fixes.
+
+* Version 2.6.4 (released 2020-11-11)
+
+** libpskc: New --with-xmlsec-crypto-engine to hard-code crypto engine.
+Fixes <https://gitlab.com/oath-toolkit/oath-toolkit/-/issues/16>.
+Use it like --with-xmlsec-crypto-engine=gnutls or
+--with-xmlsec-crypto-engine=openssl if the default dynamic loading
+fails because of runtime linker search path issues.
+
+** oathtool --totp --verbose now prints TOTP hash mode.
+Fixes <https://gitlab.com/oath-toolkit/oath-toolkit/-/issues/4>.
+
+** oathtool: Hash names (e.g., SHA256) for --totp are now upper case.
+Fixes <https://gitlab.com/oath-toolkit/oath-toolkit/-/issues/3>.
+Lower/mixed case hash names are supported for compatibility.
+
+** pam_oath: Fail gracefully for missing users.
+Fixes <https://savannah.nongnu.org/support/index.php?109111>.
+This allows you to incrementally add support for OATH authentication
+instead of forcing it on all users.  See updated pam_oath/README on
+the '[user_unknown=ignore success=ok]' parameter that can now be
+supplied to PAM configuration.  Patch by Antoine Beaupré
+<anarcat@debian.org>.
+
+** Fix libpskc memory corruption bug.
+Fixes <https://savannah.nongnu.org/support/?108736>.  Thanks to David
+Woodhouse and Jaroslav Škarvada for report, self check and patch.
+
+** Fix man pages.
+Fixes <https://savannah.nongnu.org/support/?108312>.  Thanks to
+Jaroslav Škarvada for the patch.
+
+** Build fixes.
+
+* Version 2.6.3 (released 2020-11-07)
+
+** pam_oath: Fix self-tests.
+
+** build: Update gnulib.  Fix compiler warnings.
+
+** Doc fixes.
 
 * Version 2.6.2 (released 2016-08-27)
 

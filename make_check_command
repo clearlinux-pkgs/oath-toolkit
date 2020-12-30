@@ -1,0 +1,5 @@
+# Set custom no_proxy value for libxml2 to skip proxy scans. Otherwise, libxml2
+# returns an "Unknown IO error", leading to test output mismatches.
+# Reference: https://gitlab.gnome.org/GNOME/libxml2/-/blob/79301d3d5e/nanoftp.c#L196
+no_proxy="*"
+make %{?_smp_mflags} check
