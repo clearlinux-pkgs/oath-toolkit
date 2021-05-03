@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x51722B08FE4745A2 (simon@josefsson.org)
 #
 Name     : oath-toolkit
-Version  : 2.6.5
-Release  : 5
-URL      : https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.5.tar.gz
-Source0  : https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.5.tar.gz
-Source1  : https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.5.tar.gz.sig
+Version  : 2.6.7
+Release  : 6
+URL      : https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.7.tar.gz
+Source0  : https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.7.tar.gz
+Source1  : https://download.savannah.nongnu.org/releases/oath-toolkit/oath-toolkit-2.6.7.tar.gz.sig
 Summary  : Library for Open AuTHentication (OATH) HOTP etc support.
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+ LGPL-2.1 LGPL-2.1+
@@ -23,22 +23,21 @@ BuildRequires : bison
 BuildRequires : docbook-xml
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
-BuildRequires : libxml2-dev
 BuildRequires : libxslt-bin
 BuildRequires : pkgconfig(glib-2.0)
+BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : valgrind
 BuildRequires : xmlsec1-dev
 BuildRequires : xz-dev
 
 %description
-The OATH Toolkit makes it easy to build one-time password
-authentication systems.  It contains shared libraries, command line
+OATH Toolkit provide components to build one-time password
+authentication systems.  It contains shared C libraries, command line
 tools and a PAM module.  Supported technologies include the
-event-based HOTP algorithm (RFC4226) and the time-based TOTP algorithm
-(RFC6238).  OATH stands for Open AuTHentication, which is the
-organization that specify the algorithms.  For managing secret key
-files, the Portable Symmetric Key Container (PSKC) format described in
-RFC6030 is supported.
+event-based HOTP algorithm (RFC 4226), the time-based TOTP algorithm
+(RFC 6238), and Portable Symmetric Key Container (PSKC, RFC 6030) to
+manage secret key data.  OATH stands for Open AuTHentication, which is
+the organization that specify the algorithms.
 
 %package bin
 Summary: bin components for the oath-toolkit package.
@@ -107,15 +106,15 @@ man components for the oath-toolkit package.
 
 
 %prep
-%setup -q -n oath-toolkit-2.6.5
-cd %{_builddir}/oath-toolkit-2.6.5
+%setup -q -n oath-toolkit-2.6.7
+cd %{_builddir}/oath-toolkit-2.6.7
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1609362541
+export SOURCE_DATE_EPOCH=1620070008
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -136,12 +135,12 @@ no_proxy="*"
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1609362541
+export SOURCE_DATE_EPOCH=1620070008
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oath-toolkit
-cp %{_builddir}/oath-toolkit-2.6.5/liboath/COPYING %{buildroot}/usr/share/package-licenses/oath-toolkit/01a6b4bf79aca9b556822601186afab86e8c4fbf
-cp %{_builddir}/oath-toolkit-2.6.5/oathtool/COPYING %{buildroot}/usr/share/package-licenses/oath-toolkit/8624bcdae55baeef00cd11d5dfcfa60f68710a02
-cp %{_builddir}/oath-toolkit-2.6.5/pam_oath/COPYING %{buildroot}/usr/share/package-licenses/oath-toolkit/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/oath-toolkit-2.6.7/liboath/COPYING %{buildroot}/usr/share/package-licenses/oath-toolkit/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/oath-toolkit-2.6.7/oathtool/COPYING %{buildroot}/usr/share/package-licenses/oath-toolkit/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/oath-toolkit-2.6.7/pam_oath/COPYING %{buildroot}/usr/share/package-licenses/oath-toolkit/8624bcdae55baeef00cd11d5dfcfa60f68710a02
 %make_install
 
 %files
@@ -316,12 +315,13 @@ cp %{_builddir}/oath-toolkit-2.6.5/pam_oath/COPYING %{buildroot}/usr/share/packa
 /usr/share/gtk-doc/html/liboath/api-index-2-4-0.html
 /usr/share/gtk-doc/html/liboath/api-index-2-6-0.html
 /usr/share/gtk-doc/html/liboath/api-index-full.html
+/usr/share/gtk-doc/html/liboath/deprecated-api-index.html
 /usr/share/gtk-doc/html/liboath/home.png
 /usr/share/gtk-doc/html/liboath/index.html
 /usr/share/gtk-doc/html/liboath/intro.html
 /usr/share/gtk-doc/html/liboath/left-insensitive.png
 /usr/share/gtk-doc/html/liboath/left.png
-/usr/share/gtk-doc/html/liboath/liboath-oath.html
+/usr/share/gtk-doc/html/liboath/liboath-oath.h.html
 /usr/share/gtk-doc/html/liboath/liboath.devhelp2
 /usr/share/gtk-doc/html/liboath/right-insensitive.png
 /usr/share/gtk-doc/html/liboath/right.png
@@ -330,9 +330,7 @@ cp %{_builddir}/oath-toolkit-2.6.5/pam_oath/COPYING %{buildroot}/usr/share/packa
 /usr/share/gtk-doc/html/liboath/up.png
 /usr/share/gtk-doc/html/libpskc/api-index-2-2-0.html
 /usr/share/gtk-doc/html/libpskc/api-index-full.html
-/usr/share/gtk-doc/html/libpskc/ch02s02.html
-/usr/share/gtk-doc/html/libpskc/ch02s03.html
-/usr/share/gtk-doc/html/libpskc/ch02s04.html
+/usr/share/gtk-doc/html/libpskc/deprecated-api-index.html
 /usr/share/gtk-doc/html/libpskc/home.png
 /usr/share/gtk-doc/html/libpskc/index.html
 /usr/share/gtk-doc/html/libpskc/left-insensitive.png
@@ -349,6 +347,10 @@ cp %{_builddir}/oath-toolkit-2.6.5/pam_oath/COPYING %{buildroot}/usr/share/packa
 /usr/share/gtk-doc/html/libpskc/pskc-tutorial-libpskc-create.html
 /usr/share/gtk-doc/html/libpskc/pskc-tutorial-libpskc-sign.html
 /usr/share/gtk-doc/html/libpskc/pskc-tutorial-libpskc-verify.html
+/usr/share/gtk-doc/html/libpskc/pskc-tutorial-library.html
+/usr/share/gtk-doc/html/libpskc/pskc-tutorial-pskctool-sign.html
+/usr/share/gtk-doc/html/libpskc/pskc-tutorial-pskctool-validate.html
+/usr/share/gtk-doc/html/libpskc/pskc-tutorial-pskctool-verify.html
 /usr/share/gtk-doc/html/libpskc/pskc-tutorial-pskctool.html
 /usr/share/gtk-doc/html/libpskc/pskc-tutorial-quickstart.html
 /usr/share/gtk-doc/html/libpskc/pskc-tutorial.html

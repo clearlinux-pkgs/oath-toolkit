@@ -1,6 +1,5 @@
-2.6.5
+2.6.7
 Linux-PAM-dev
 bison
-libxml2-dev
 pkgconfig(glib-2.0)
 valgrind

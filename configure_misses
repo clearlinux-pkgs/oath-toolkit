@@ -1,51 +1,48 @@
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: fpurge
-Configure miss: pthread_sigmask
-Configure miss: crtdefs.h
-Configure miss: priv.h
 Configure miss: 32-bit host C ABI
-Configure miss: whether fflush works on input streams
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: library needed for semaphore functions
-Configure miss: strerror_r with POSIX signature
-Configure miss: whether fpurge is declared
-Configure miss: _fseeki64
-Configure miss: ioctl with POSIX signature
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: working nanosleep
-Configure miss: getppriv
-Configure miss: whether pthread_sigmask is a macro
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: pthread_sigmask
-Configure miss: crtdefs.h
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: strerror_r with POSIX signature
-Configure miss: library needed for semaphore functions
 Configure miss: __mktime_internal
-Configure miss: timezone_t
+Configure miss: _fseeki64
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: crtdefs.h
+Configure miss: crtdefs.h
+Configure miss: crtdefs.h
+Configure miss: crtdefs.h
+Configure miss: fpurge
+Configure miss: getppriv
 Configure miss: ioctl with POSIX signature
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: working nanosleep
-Configure miss: whether pthread_sigmask is a macro
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: crtdefs.h
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: whether the compiler is clang
-Configure miss: compiler option needed when checking for declarations
-Configure miss: memset_s
-Configure miss: pthread_sigmask
-Configure miss: mquery
-Configure miss: pstat_getprocvm
-Configure miss: crtdefs.h
-Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: strerror_r with POSIX signature
+Configure miss: ioctl with POSIX signature
+Configure miss: ioctl with POSIX signature
 Configure miss: library needed for semaphore functions
-Configure miss: ioctl with POSIX signature
+Configure miss: library needed for semaphore functions
+Configure miss: library needed for semaphore functions
+Configure miss: memset_s
+Configure miss: mquery
+Configure miss: priv.h
+Configure miss: pstat_getprocvm
+Configure miss: strerror_r with POSIX signature
+Configure miss: strerror_r with POSIX signature
+Configure miss: strerror_r with POSIX signature
+Configure miss: timezone_t
+Configure miss: whether fflush works on input streams
+Configure miss: whether fpurge is declared
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: working nanosleep
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_sigmask is a macro
+Configure miss: whether pthread_sigmask is a macro
+Configure miss: whether pthread_sigmask is a macro
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler is clang
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: working nanosleep
+Configure miss: working nanosleep
+Configure miss: working nanosleep
