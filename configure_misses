@@ -1,6 +1,12 @@
 Configure miss: 32-bit host C ABI
+Configure miss: GTKDOC_DEPS
+Configure miss: GTKDOC_DEPS
 Configure miss: __mktime_internal
 Configure miss: _fseeki64
+Configure miss: bool, true, false
+Configure miss: bool, true, false
+Configure miss: bool, true, false
+Configure miss: bool, true, false
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
@@ -10,30 +16,35 @@ Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: crtdefs.h
+Configure miss: explicit_memset
 Configure miss: fpurge
-Configure miss: getppriv
-Configure miss: ioctl with POSIX signature
-Configure miss: ioctl with POSIX signature
-Configure miss: ioctl with POSIX signature
-Configure miss: library needed for semaphore functions
-Configure miss: library needed for semaphore functions
-Configure miss: library needed for semaphore functions
+Configure miss: gcc option to enable large file support
+Configure miss: gcc option to enable large file support
+Configure miss: gcc option to enable large file support
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: memset_explicit
 Configure miss: memset_s
-Configure miss: mquery
-Configure miss: priv.h
-Configure miss: pstat_getprocvm
-Configure miss: strerror_r with POSIX signature
-Configure miss: strerror_r with POSIX signature
-Configure miss: strerror_r with POSIX signature
+Configure miss: stdckdint.h
+Configure miss: stdckdint.h
+Configure miss: stdckdint.h
+Configure miss: stdckdint.h
 Configure miss: timezone_t
+Configure miss: unreachable
+Configure miss: unreachable
+Configure miss: unreachable
+Configure miss: unreachable
+Configure miss: whether SEEK_DATA works but is incompatible with GNU
+Configure miss: whether SEEK_DATA works but is incompatible with GNU
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether fflush works on input streams
 Configure miss: whether fflush works on input streams
 Configure miss: whether fpurge is declared
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
-Configure miss: whether pthread_sigmask is a macro
-Configure miss: whether pthread_sigmask is a macro
-Configure miss: whether pthread_sigmask is a macro
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
@@ -43,6 +54,10 @@ Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: working nanosleep
-Configure miss: working nanosleep
-Configure miss: working nanosleep
+Configure miss: whether valgrind works on executables produced by the compiler
+Configure miss: whether valgrind works on executables produced by the compiler
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file

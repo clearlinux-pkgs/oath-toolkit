@@ -1,7 +1,57 @@
 OATH Toolkit NEWS -- History of user-visible changes.           -*- outline -*-
-Copyright (C) 2009-2021 Simon Josefsson.  Licensed under the GPLv3+.
+Copyright (C) 2009-2024 Simon Josefsson.  Licensed under the GPLv3+.
 
-* Version 2.6.7 (released 2020-05-01)
+* Version 2.6.10 (released 2024-01-03)
+
+** Building from git uses a ./bootstrap script instead of 'make bootstrap'.
+
+** Build fixes for Windows.
+In particular, don't use filenames "aux.h" and "aux.c" which interact
+badly with the AUX special filename.
+
+** Build fixes for Arch Linux.
+
+** Various build fixes including updated gnulib files.
+One remaining gnulib self-test disabled.
+
+* Version 2.6.9 (released 2023-07-09)
+
+** Improve compatibility with recent libxmlsec.
+
+** Update gnulib files, dropping gnulib self-tests.
+
+* Version 2.6.8 (released 2023-07-09)
+
+** libpskc: Fixes for recent libxmlsec releases.
+
+** pam_oath: Provide fallback pam_modutil_getpwnam implementation.
+Fixes <https://gitlab.com/oath-toolkit/oath-toolkit/-/issues/26> on
+Mac OS.  Patch from Nick Gaya <nicholasgaya+github@gmail.com>.
+
+** pam_oath: Don't fail authentication when pam_modutil_getpwnam doesn't
+** know the user when usersfile don't include ${USER} or ${HOME}. Closes: #27.
+Regression introduced in previous release.  Reported by Nick Gaya
+<nicholasgaya+github@gmail.com>.
+
+** pam_oath: Self-test improvements.
+Patch from Nick Gaya <nicholasgaya+github@gmail.com>.
+
+** liboath: Builds on Windows.
+The oath_authenticate_usersfile function is just a stub that returns
+an error.  This allows for use of the rest of the library on Windows.
+Thanks to David Woodhouse, see
+<https://gitlab.com/oath-toolkit/oath-toolkit/-/merge_requests/15>.
+
+** Disable PAM self-tests on Mac.  Fix --enable-root-tests logic.
+
+** Don't ship gtk-doc PDF's in tarball.
+
+** Use gitlog-to-changelog instead of git2cl.
+
+** Codespell typo fixes.
+Patch by Dimitri Papadopoulos.
+
+* Version 2.6.7 (released 2021-05-01)
 
 ** pam_oath: Support variables in usersfile string parameter.
 These changes introduce the ${USER} and ${HOME} placeholder values for
@@ -128,7 +178,7 @@ Suggested by Jaroslav Škarvada.
 
 ** liboath: Fix usersfile bug that caused it to update the wrong line.
 When an usersfile contain multiple lines for the same user but with an
-unparseable token type (e.g., HOTP vs TOTP), the code would update the
+unparsable token type (e.g., HOTP vs TOTP), the code would update the
 wrong line of the file.  Since the then updated line could be a
 commented out line, this can lead to the same OTP being accepted
 multiple times which is a security vulnerability.  Reported by Bas van
