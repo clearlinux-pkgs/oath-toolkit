@@ -110,10 +110,6 @@ Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether the compiler produces multi-arch binaries
-Configure miss: whether valgrind works on executables produced by the compiler
-Configure miss: whether valgrind works on executables produced by the compiler
-Configure miss: whether valgrind works on executables produced by the compiler
-Configure miss: whether valgrind works on executables produced by the compiler
 Configure miss: x86_64-generic-linux-gnu-file
 Configure miss: x86_64-generic-linux-gnu-file
 Configure miss: x86_64-generic-linux-gnu-file
